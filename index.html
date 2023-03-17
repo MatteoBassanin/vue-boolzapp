@@ -63,9 +63,9 @@
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
-                    <div v-for="(text,index,array) in contacts" class="chat_display">
+                    <div v-for="text in contacts[activeChat].messages" class="chat_display">
                         <div class="text_right pd_20">
-                            <span class="user_message">{{text.messages[activeChat]}}</span>
+                            <span class="user_message">{{text.message}}</span>
                         </div>
                         <!-- <div class="text_right pd_20">
                             <span class="user_message">Hai portato a spasso il cane</span>
