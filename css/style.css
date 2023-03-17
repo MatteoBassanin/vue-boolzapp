@@ -14,7 +14,7 @@
 
 .user_container{
     width: 33.333%;
-    height: 500px;
+    /* height: 500px; */
     background-color: #FFFFFF;
     border: 1px solid black;
 }
@@ -23,6 +23,7 @@
     width: 66.666%;
     height: 500px;
     background-image: url("../img/mine.jpg");
+    overflow-y: scroll;
 }
 
 .top-bar{
@@ -43,10 +44,19 @@
     border-bottom: 1px solid grey;
 }
 
-.search_bar input{
-    padding: 5px 90px;
+.search_bar{
+    padding: 5px;
 }
 
+.search_bar input{
+    padding: 4px;
+    min-width: 250px;
+}
+span.search_icon {
+    border: 1px solid black;
+    padding: 4px 17px;
+    border-right: none;
+}
 .contact img{
     height: 50px;
 }
@@ -75,11 +85,14 @@
 
 .chat_display{
     height: calc(100% - 110px);
+    
 }
 
 .bottom_bar{
     height: 60px;
     background-color: #F3EEEA;
+    
+    
 }
 .bottom_bar input{
     padding: 10px ;
@@ -89,7 +102,7 @@
 .bottom_bar i {
     padding: 25px;
 }
-}
+
 /* utilities */
 
 .text_center{
@@ -115,4 +128,8 @@
 
 .pd_20{
     padding: 20px;
+}
+
+.overflow_y{
+    overflow-y: scroll;
 }

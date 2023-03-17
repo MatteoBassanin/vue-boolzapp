@@ -27,45 +27,23 @@
                         </div>
                     </div>
                     <div class="notification-bar">
-    
+                        <i class="fa-solid fa-bell-slash"></i>
                     </div>
                     <div class="search_bar text_center">
+                        <span class="search_icon"><i class="fa-solid fa-magnifying-glass"></i></span>
                         <input type="text" placeholder="Search..">
                     </div>
     
-                    <div class="contact_list">
-                        <div class="contact d_flex space_between">
-                            <img src="img/avatar_1.jpg" alt="primo avatar">
+                    <div class="contact_list overflow_y" v-for="(contact,index) in contacts">
+                        <div @click="changeContact(index)" class="contact d_flex space_between">
+                            <img :src="contact.avatar" alt="primo avatar">
                             <div class="contact_middle">
-                                <h3 class="name">Michele</h3>
+                                <h3 class="name">{{contact.name}}</h3>
                                 <span class="last_message">Ultimo messaggio inviato</span>
                             </div>
                             <span class="last_view">12:00</span>
                         </div>
-                        <div class="contact d_flex space_between">
-                            <img src="img/avatar_1.jpg" alt="primo avatar">
-                            <div class="contact_middle">
-                                <h3 class="name">Michele</h3>
-                                <span class="last_message">Ultimo messaggio inviato</span>
-                            </div>
-                            <span class="last_view">12:00</span>
-                        </div>
-                        <div class="contact d_flex space_between">
-                            <img src="img/avatar_1.jpg" alt="primo avatar">
-                            <div class="contact_middle">
-                                <h3 class="name">Michele</h3>
-                                <span class="last_message">Ultimo messaggio inviato</span>
-                            </div>
-                            <span class="last_view">12:00</span>
-                        </div>
-                        <div class="contact d_flex space_between">
-                            <img src="img/avatar_1.jpg" alt="primo avatar">
-                            <div class="contact_middle">
-                                <h3 class="name">Michele</h3>
-                                <span class="last_message">Ultimo messaggio inviato</span>
-                            </div>
-                            <span class="last_view">12:00</span>
-                        </div>
+                     
                     </div>
                 
                 </div>
@@ -85,16 +63,16 @@
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
-                    <div class="chat_display">
+                    <div v-for="(text,index,array) in contacts" class="chat_display">
                         <div class="text_right pd_20">
-                            <span class="user_message">Hai portato a spasso il cane</span>
+                            <span class="user_message">{{text.messages[activeChat]}}</span>
                         </div>
-                        <div class="text_right pd_20">
+                        <!-- <div class="text_right pd_20">
                             <span class="user_message">Hai portato a spasso il cane</span>
                         </div>
                         <div class="text_left pd_20">
                             <span class="received_message">Hai portato a spasso il cane</span>
-                        </div>
+                        </div> -->
 
                     </div>
                     <div class="bottom_bar d_flex space_between align_center">
