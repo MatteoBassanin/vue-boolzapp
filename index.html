@@ -63,15 +63,16 @@
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
-                    <div v-for="text in contacts[activeChat].messages" class="chat_display">
-                        <div class="text_right pd_20">
-                            <span class="user_message" v-if="text.status == 'sent'">{{text.message}} </span>
-                        </div>
-                        <!-- <div class="text_right pd_20">
-                            <span class="user_message">Hai portato a spasso il cane</span>
-                        </div> -->
-                        <div class="text_left pd_20">
-                            <span class="received_message" v-if="text.status == 'received'">{{text.message}}</span>
+                    <div class="chat_display">
+                        <div class="inner_chat" v-for="text in contacts[activeChat].messages" >
+                            <div class="text_right pd_20">
+                                <span class="user_message" v-if="text.status == 'sent'">{{text.message}} </span>
+                            </div>
+    
+                            <div  class="text_left pd_20">
+                                <span class="received_message" v-if="text.status == 'received'">{{text.message}}</span>
+                            </div>
+
                         </div>
 
                     </div>
