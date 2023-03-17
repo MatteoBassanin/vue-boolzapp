@@ -176,7 +176,7 @@ createApp({
     }
     
   },
-  mounted(text){
-    return text.substr(11, 5);
-  },
+//   mounted(text){
+//     return text.substr(11, 5);
+//   },
 }).mount('#app')

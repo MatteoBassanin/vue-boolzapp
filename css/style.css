@@ -14,12 +14,19 @@ img{
     margin: auto;
     margin-top: 50px;
 }
+.font-10 a {
+    color: grey;
+}
+
+.name{
+    font-size: 14px;
+}
 
 .user_container{
     width: 33.333%;
     /* height: 500px; */
     background-color: #FFFFFF;
-    border: 1px solid black;
+    border: 1px solid #B1B1B1;
 }
 
 .chat_container{
@@ -35,7 +42,7 @@ img{
     width: 100%;
 }
 .user{
-    border-right: 1px solid black;
+    border-right: 1px solid B1B1B1;
 }
 
 .notification-bar{
@@ -44,7 +51,7 @@ img{
 }
 
 .contact{
-    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
 }
 
 .search_bar{
@@ -56,7 +63,7 @@ img{
     min-width: 250px;
 }
 span.search_icon {
-    border: 1px solid black;
+    border: 1px solid #B1B1B1;
     padding: 4px 17px;
     border-right: none;
 }
@@ -67,7 +74,10 @@ span.search_icon {
 .current_user img,.user_details img{
     height: 40px;
 }
-
+.last_message,.last_view{
+    color:#B1B1B1;
+    font-size: 12px;
+}
 .actions i {
     margin: 0 10px;
 }
@@ -93,10 +103,9 @@ span.search_icon {
 
 .bottom_bar{
     height: 60px;
-    background-color: #F3EEEA;
-    
-    
+    background-color: #F3EEEA;   
 }
+
 .bottom_bar input{
     padding: 10px ;
     text-align: left;
@@ -111,6 +120,16 @@ span.search_icon {
     position: relative;
     top: 10px;
 }
+i{
+    color: #B1B1B1;
+}
+i.fa-solid.fa-bell-slash {
+    background-color: white;
+    padding: 7px;
+    border-radius: 50%;
+    color: #81CCF0;
+}
+
 /* utilities */
 
 .text_center{
@@ -141,4 +160,8 @@ span.search_icon {
 
 .overflow_y{
     overflow-y: scroll;
+}
+
+.font-10{
+    font-size: 10px;
 }

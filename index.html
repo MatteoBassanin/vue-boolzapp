@@ -26,8 +26,12 @@
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
-                    <div class="notification-bar">
+                    <div class="notification-bar d_flex align_center">
                         <i class="fa-solid fa-bell-slash"></i>
+                        <div>
+                            <p class="font-10">Ricevi notifiche di nuovi messaggi</p>
+                            <span class="font-10"><a href="#">Attiva notifiche desktop</a></span>
+                        </div>
                     </div>
                     <div class="search_bar text_center">
                         <span class="search_icon"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -52,7 +56,7 @@
                         <div class="current_user d_flex">
                             <img src="img/avatar_1.jpg" alt="primo avatar">
                             <div class="contact_middle">
-                                <h3 class="name">Michele</h3>
+                                <h5 class="name">Michele</h5>
                                 <span class="last_message">Ultimo messaggio inviato</span>
                                 <span class="last_view">12:00</span>
                             </div>
@@ -74,7 +78,7 @@
                             </div>
     
                             <div  class="text_left">
-                                <span class="received_message" v-if="text.status == 'received'">{{text.message}}</span>
+                                <span class="received_message" v-if="text.status == 'received'">{{text.message}}<span class="time">{{text.date}} </span></span>
                             </div>
 
                         </div>
