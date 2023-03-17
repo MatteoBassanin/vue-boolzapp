@@ -105,7 +105,12 @@ span.search_icon {
 .bottom_bar i {
     padding: 25px;
 }
-
+.time{
+    font-size: 8px;
+    color: grey;
+    position: relative;
+    top: 10px;
+}
 /* utilities */
 
 .text_center{

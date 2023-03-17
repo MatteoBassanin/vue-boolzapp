@@ -66,7 +66,11 @@
                     <div class="chat_display">
                         <div class="inner_chat pd_20" v-for="text in contacts[activeChat].messages" >
                             <div class="text_right">
-                                <span class="user_message" v-if="text.status == 'sent'">{{text.message}} </span>
+                                <div>
+
+                                    <span class="user_message" v-if="text.status == 'sent'">{{text.message}}<span class="time">{{text.date}} </span> </span>
+                                    
+                                </div>
                             </div>
     
                             <div  class="text_left">

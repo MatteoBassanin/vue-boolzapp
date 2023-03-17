@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+        newText : "",
         activeChat : 0,
         contacts: [
             {
@@ -173,5 +174,9 @@ createApp({
         console.log("show",index);
         this.activeChat = index;
     }
-  }
+    
+  },
+  mounted(text){
+    return text.substr(11, 5);
+  },
 }).mount('#app')
