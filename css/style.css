@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 img{
     border-radius: 50%;
 }
@@ -16,6 +20,10 @@ img{
 }
 .font-10 a {
     color: grey;
+}
+
+.user_name{
+    vertical-align: 10px;
 }
 
 .name{
@@ -51,7 +59,7 @@ img{
 }
 
 .contact{
-    border-top: 1px solid grey;
+    border-top: 1px solid #B1B1B1;
 }
 
 .search_bar{
@@ -60,13 +68,13 @@ img{
 
 .search_bar input{
     padding: 5px;
-    min-width: 250px;
+    min-width: 280px;
     border: 1px solid #B1B1B1;
     font-size: 10px;
 }
 span.search_icon {
     border: 1px solid #B1B1B1;
-    padding: 4px 17px;
+    padding: 5px 17px;
     border-right: none;
     font-size: 10px;
 }
@@ -79,7 +87,10 @@ span.search_icon {
 }
 .last_message,.last_view{
     color:#B1B1B1;
-    font-size: 12px;
+    font-size: 10px;
+}
+.last_view{
+    padding-left: 50px;
 }
 .actions i {
     margin: 0 10px;
