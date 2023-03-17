@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+img{
+    border-radius: 50%;
+}
 
 .big_container{
     display: flex;
@@ -21,7 +24,7 @@
 
 .chat_container{
     width: 66.666%;
-    height: 500px;
+    height: 600px;
     background-image: url("../img/mine.jpg");
     overflow-y: scroll;
 }
@@ -128,6 +131,7 @@ span.search_icon {
 
 .pd_20{
     padding: 20px;
+   
 }
 
 .overflow_y{
