@@ -168,11 +168,32 @@ createApp({
             ],
             }
             ]
+            
     }
   },methods:{
     changeContact(index){
         console.log("show",index);
         this.activeChat = index;
+    },
+    receivedText(){
+      const newreceivedText={
+        date: '10/01/2020 15:51:00',
+        message: "ok",
+        status:"received",
+      }
+      this.contacts[this.activeChat].messages.push(newreceivedText)
+      
+    },
+    sendingText(){
+      const newMessageText=
+        {
+        date: '10/01/2020 15:51:00',
+        message: this.newText,
+        status:"sent",
+      }
+    this.contacts[this.activeChat].messages.push(newMessageText),
+    this.newText= ""
+    
     }
     
   },
