@@ -1,8 +1,11 @@
+const DateTime = luxon.DateTime;
+
 const { createApp } = Vue
 
 createApp({
   data() {
     return {
+        timeNow: DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS),
         newText : "",
         searchItem : "",
         activeChat : 0,
@@ -179,7 +182,7 @@ createApp({
     sendingText(){
       const newMessageText=
         {
-        date: '10/01/2020 15:51:00',
+        date: this.timeNow,
         message: this.newText,
         status:"sent",
       }
@@ -187,7 +190,7 @@ createApp({
       this.newText= ""
       setTimeout(()=> {
         const newreceivedText = {
-          date: '10/01/2020 15:51:00',
+          date: this.timeNow,
           message: "ok",
           status:"received",
         }
