@@ -4,6 +4,7 @@ createApp({
   data() {
     return {
         newText : "",
+        searchItem : "",
         activeChat : 0,
         contacts: [
             {
@@ -192,6 +193,16 @@ createApp({
         }
       this.contacts[this.activeChat].messages.push(newreceivedText);
       }, 1000);
+    },
+    filteringContacts(){
+      this.contacts.forEach(element => {
+        if (element.name.toLowerCase().includes(this.searchItem)){
+          return element.visible = true;          
+        }else{
+          return element.visible = false;
+        }
+          
+      });
     }
     
   },
