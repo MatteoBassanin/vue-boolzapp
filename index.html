@@ -79,7 +79,7 @@
                                     <span class="time">{{text.date}} </span>
                                     <span class="menu_arrow_down d_none"><i class="fa-solid fa-chevron-down " @click="changingDisplay(index)" ></i></span>
                                     </span>
-                                    <div class="hidden_menu right " v-show="hiddenMenu == true && index == activeChat"  >
+                                    <div class="hidden_menu right " v-if="hiddenMenu == true && index == activeMessage"  >
                                         <div>Message info</div>
                                         <div>Delete message</div>
                                     </div>

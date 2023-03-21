@@ -10,6 +10,7 @@ createApp({
         newText : "",
         searchItem : "",
         activeChat : 0,
+        activeMessage : 0,
         contacts: [
             {
             name: 'Michele',
@@ -209,7 +210,7 @@ createApp({
       });
     },
     changingDisplay(index){
-      this.activeChat = index;
+      this.activeMessage = index;
       if(this.hiddenMenu == false){
         this.hiddenMenu = true;
 
