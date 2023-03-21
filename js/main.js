@@ -5,6 +5,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+        hiddenMenu:false,
         timeNow: DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS),
         newText : "",
         searchItem : "",
@@ -206,10 +207,15 @@ createApp({
         }
           
       });
-    }
-    
+    },
+    changingDisplay(index){
+      if(this.hiddenMenu[index] == false){
+        this.hiddenMenu[index] = true;
+
+      }else{
+        this.hiddenMenu[index] = false;
+      }
+      console.log(index);
+    },
   },
-//   mounted(text){
-//     return text.substr(11, 5);
-//   },
 }).mount('#app')

@@ -71,15 +71,23 @@
                         </div>
                     </div>
                     <div class="chat_display">
-                        <div class="inner_chat pd_20" v-for="text in contacts[activeChat].messages" >
+                        <div class="inner_chat pd_20" v-for="(text,index) in contacts[activeChat].messages" >
                             <div class="text_right">
                                 <div>
 
-                                    <span class="user_message" v-if="text.status == 'sent'">{{text.message}}<span class="time">{{text.date}} </span> </span>
+                                    <span class="user_message" v-if="text.status == 'sent'">{{text.message}}
+                                    <span class="time">{{text.date}} </span>
+                                    <span class="menu_arrow_down d_none"><i class="fa-solid fa-chevron-down " @click="changingDisplay(index)" ></i></span>
+                                    </span>
+                                    <div class="hidden_menu right " v-show="hiddenMenu == true "  v-bind="hiddenMenu">
+                                        <div>Message info</div>
+                                        <div>Delete message</div>
+                                    </div>
                                     
+                                      
                                 </div>
                             </div>
-    
+                            
                             <div  class="text_left">
                                 <span class="received_message" v-if="text.status == 'received'">{{text.message}}<span class="time">{{text.date}} </span></span>
                             </div>
