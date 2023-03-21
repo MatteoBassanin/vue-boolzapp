@@ -68,18 +68,24 @@ img{
     padding: 5px;
 }
 
+.search_icon{
+    bottom: 25%;
+    left: 8%;
+}
+
 .search_bar input{
     padding: 5px;
-    min-width: 280px;
+    min-width: 90%;
     border: 1px solid #B1B1B1;
     font-size: 10px;
+    padding-left: 30px;
 }
-span.search_icon {
+/* span.search_icon {
     border: 1px solid #B1B1B1;
     padding: 5px 17px;
     border-right: none;
     font-size: 10px;
-}
+} */
 .contact img{
     height: 50px;
 }
@@ -225,3 +231,4 @@ i.fa-solid.fa-bell-slash {
 .p_absolute{
     position: absolute;
 }
+
