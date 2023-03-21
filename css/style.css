@@ -154,11 +154,19 @@ i.fa-solid.fa-bell-slash {
     width: 100px;
     font-size: 12px;
     position: relative;
-    left: 70%;
+    border: 1px solid black;
     /* display: none; */
 }
 
-.user_message:hover .menu_arrow_down{
+.right{
+    left: 70%;
+}
+
+.left{
+    top: 80px;
+}
+
+.user_message:hover .menu_arrow_down,.received_message:hover .menu_arrow_down{
     display: inline;
 }
 

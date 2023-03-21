@@ -79,7 +79,7 @@
                                     <span class="time">{{text.date}} </span>
                                     <span class="menu_arrow_down d_none"><i class="fa-solid fa-chevron-down " @click="changingDisplay(index)" ></i></span>
                                     </span>
-                                    <div class="hidden_menu right " v-if="hiddenMenu == true && index == activeMessage"  >
+                                    <div class="hidden_menu  " v-if="hiddenMenu == true && index == activeMessage" :class="text.status == 'sent'? 'right':'left'" >
                                         <div>Message info</div>
                                         <div>Delete message</div>
                                     </div>
@@ -89,7 +89,14 @@
                             </div>
                             
                             <div  class="text_left">
-                                <span class="received_message" v-if="text.status == 'received'">{{text.message}}<span class="time">{{text.date}} </span></span>
+                                <span class="received_message" v-if="text.status == 'received'">{{text.message}}
+                                <span class="time">{{text.date}} </span>
+                                <span class="menu_arrow_down d_none"><i class="fa-solid fa-chevron-down " @click="changingDisplay(index)" ></i></span>
+                                </span>
+                                <!-- <div class="hidden_menu left " v-if="hiddenMenu == true && index == activeMessage"  >
+                                    <div>Message info</div>
+                                    <div>Delete message</div>
+                                </div> -->
                             </div>
 
                         </div>
