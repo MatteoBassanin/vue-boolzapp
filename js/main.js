@@ -6,6 +6,7 @@ createApp({
   data() {
     return {
         hiddenMenu:false,
+        
         timeNow: DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS),
         newText : "",
         searchItem : "",
@@ -219,9 +220,17 @@ createApp({
       }
       console.log(index);
     },
+    showingHiddenTopMenu(element){
+      element = document.querySelector(".top")
+      element.classList.toggle('d_none')
+    },
     deleteCurrentMessage(){
       this.contacts[this.activeChat].messages.splice(this.activeMessage, 1);
       this.currentMessage = false;
     },
+    deleteAllMessages(){
+      this.contacts[this.activeChat].messages.splice(this.activeMessage, 99);
+      this.currentMessage = false;
+    }
   },
 }).mount('#app')

@@ -67,7 +67,11 @@
                         <div class="actions">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <i class="fa-solid fa-paperclip"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-solid fa-ellipsis-vertical" @click="showingHiddenTopMenu"></i>
+                            <div class="hidden_menu top p_absolute d_none" @click="showingHiddenTopMenu(hiddenTopMenu)" >
+                                <div class="menu_option">Delete chat</div>
+                                <div class="menu_option delete" @click="deleteAllMessages()">Delete messages</div>
+                            </div>
                         </div>
                     </div>
                     <div class="chat_display">
