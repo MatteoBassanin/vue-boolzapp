@@ -17,7 +17,7 @@
         <div class="background">
 
             <div class="big_container">
-                <div class="user_container">
+                <div class="user_container ">
                     <div class="top-bar user d_flex space_between align_center">
                         <div class="user_details">
                             <img src="img/avatar_io.jpg" alt="mio avatar">
@@ -37,21 +37,22 @@
                         </div>
                     </div>
                     <div class="search_bar text_center p_relative">
-                        <!-- <span class="search_icon"></span> -->
                         <i class="fa-solid fa-magnifying-glass p_absolute search_icon"></i>
                         <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchItem" @keyup="filteringContacts()">
                     </div>
-    
-                    <div class="contact_list overflow_y" v-for="(contact,index) in contacts">
-                        <div @click="changeContact(index)" class="contact d_flex space_between" v-show="contact.visible==true">
-                            <img :src="contact.avatar" alt="primo avatar">
-                            <div class="contact_middle">
-                                <h3 class="name">{{contact.name}}</h3>
-                                <span class="last_message">Ultimo messaggio inviato</span>
+                    <div class="contact_wrapper overflow_y">
+                        <div class="contact_list " v-for="(contact,index) in contacts">
+                            <div @click="changeContact(index)" class="contact d_flex space_between" v-show="contact.visible==true">
+                                <img :src="contact.avatar" alt="primo avatar">
+                                <div class="contact_middle">
+                                    <h3 class="name">{{contact.name}}</h3>
+                                    <span class="last_message">Ultimo messaggio inviato</span>
+                                </div>
+                                <span class="last_view">12:00</span>
                             </div>
-                            <span class="last_view">12:00</span>
+                         
                         </div>
-                     
+
                     </div>
                 
                 </div>

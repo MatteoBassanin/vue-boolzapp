@@ -51,9 +51,10 @@ img{
     height: 50px;
     width: 100%;
 }
-/* .user{
-    border-right: 1px solid #B1B1B1;
-} */
+
+.contact_wrapper{
+    height: calc(100% - 143px);
+}
 
 .notification-bar{
     background-color: #8CD2F2;
@@ -80,12 +81,7 @@ img{
     font-size: 10px;
     padding-left: 30px;
 }
-/* span.search_icon {
-    border: 1px solid #B1B1B1;
-    padding: 5px 17px;
-    border-right: none;
-    font-size: 10px;
-} */
+
 .contact img{
     height: 50px;
 }
@@ -131,7 +127,7 @@ img{
 
 .bottom_bar input{
     padding: 10px ;
-    min-width: 500px;
+    min-width: 65%;
     border: none;
     border-radius: 4px;
 }
@@ -211,6 +207,10 @@ i.fa-solid.fa-bell-slash {
 
 .overflow_y{
     overflow-y: scroll;
+}
+
+.overflow_hidden{
+    overflow: hidden;
 }
 
 .font-10{
