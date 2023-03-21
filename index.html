@@ -77,9 +77,9 @@
 
                                     <span class="user_message" v-if="text.status == 'sent'">{{text.message}}
                                     <span class="time">{{text.date}} </span>
-                                    <span class="menu_arrow_down d_none"><i class="fa-solid fa-chevron-down " @click="changingDisplay(index)" ></i></span>
+                                    <span class="menu_arrow_down d_none"><i class="fa-solid fa-chevron-down " @click="changingDisplay" ></i></span>
                                     </span>
-                                    <div class="hidden_menu right " v-show="hiddenMenu == true "  v-bind="hiddenMenu">
+                                    <div class="hidden_menu right " v-show="hiddenMenu == true"  >
                                         <div>Message info</div>
                                         <div>Delete message</div>
                                     </div>

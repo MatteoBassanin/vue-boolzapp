@@ -208,14 +208,14 @@ createApp({
           
       });
     },
-    changingDisplay(index){
-      if(this.hiddenMenu[index] == false){
-        this.hiddenMenu[index] = true;
+    changingDisplay(){
+      if(this.hiddenMenu == false){
+        this.hiddenMenu = true;
 
       }else{
-        this.hiddenMenu[index] = false;
+        this.hiddenMenu = false;
       }
-      console.log(index);
+      // console.log(index);
     },
   },
 }).mount('#app')
