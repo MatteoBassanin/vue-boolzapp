@@ -57,9 +57,9 @@
                 <div class="chat_container">
                     <div class="top-bar chat d_flex space_between align_center">
                         <div class="current_user d_flex">
-                            <img src="img/avatar_1.jpg" alt="primo avatar">
+                            <img :src="contacts[activeChat].avatar" alt="primo avatar">
                             <div class="contact_middle">
-                                <h5 class="name">Michele</h5>
+                                <h5 class="name">{{contacts[activeChat].name}}</h5>
                                 <span class="last_message">Ultimo messaggio inviato</span>
                                 <span class="last_view">12:00</span>
                             </div>
