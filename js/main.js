@@ -208,14 +208,15 @@ createApp({
           
       });
     },
-    changingDisplay(){
+    changingDisplay(index){
+      this.activeChat = index;
       if(this.hiddenMenu == false){
         this.hiddenMenu = true;
 
       }else{
         this.hiddenMenu = false;
       }
-      // console.log(index);
+      console.log(index);
     },
   },
 }).mount('#app')
