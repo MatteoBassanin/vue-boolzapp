@@ -232,7 +232,8 @@ createApp({
       this.contacts[this.activeChat].messages= false;
     },
     deleteChat(){
-      this.contacts[this.activeChat].messages= false;
+      this.contacts.splice(this.activeChat, 1);
+      
     }
   },
 }).mount('#app')
