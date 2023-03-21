@@ -153,7 +153,7 @@ i.fa-solid.fa-bell-slash {
     background-color: white;
     width: 100px;
     font-size: 12px;
-    position: relative;
+    z-index: 1;
     border: 1px solid black;
     /* display: none; */
 }
@@ -163,7 +163,7 @@ i.fa-solid.fa-bell-slash {
 }
 
 .left{
-    top: 80px;
+    top: 30px;
 }
 
 .user_message:hover .menu_arrow_down,.received_message:hover .menu_arrow_down{
@@ -215,4 +215,12 @@ i.fa-solid.fa-bell-slash {
 
 .d_none{
     display: none;
+}
+
+.p_relative{
+    position: relative;
+}
+
+.p_absolute{
+    position: absolute;
 }
