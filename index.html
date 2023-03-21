@@ -80,8 +80,8 @@
                                     <span class="menu_arrow_down d_none"><i class="fa-solid fa-chevron-down " @click="changingDisplay(index)" ></i></span>
                                     </span>
                                     <div class="hidden_menu  p_absolute" v-if="hiddenMenu == true && index == activeMessage" :class="text.status == 'sent'? 'right':'left'" >
-                                        <div>Message info</div>
-                                        <div>Delete message</div>
+                                        <div class="menu_option">Message info</div>
+                                        <div class="menu_option delete" @click="deleteCurrentMessage()">Delete message</div>
                                     </div>
                                     
                                       
@@ -93,10 +93,7 @@
                                 <span class="time">{{text.date}} </span>
                                 <span class="menu_arrow_down d_none"><i class="fa-solid fa-chevron-down " @click="changingDisplay(index)" ></i></span>
                                 </span>
-                                <!-- <div class="hidden_menu left " v-if="hiddenMenu == true && index == activeMessage"  >
-                                    <div>Message info</div>
-                                    <div>Delete message</div>
-                                </div> -->
+
                             </div>
 
                         </div>

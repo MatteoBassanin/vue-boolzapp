@@ -170,9 +170,9 @@ i.fa-solid.fa-bell-slash {
     display: inline;
 }
 
-/* .menu_arrow_down:active .hidden_menu{
-    display: block;
-} */
+.menu_option:hover{
+    background-color: red;
+}
 
 /* utilities */
 
